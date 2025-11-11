@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'inicio_pasteleria' %}">🍰 Sistema de Administración Pastelería</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'inicio_pasteleria' %}">Inicio</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            🛍️ Productos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'agregar_pasteleria' %}">Agregar producto</a></li>
+            <li><a class="dropdown-item" href="{% url 'inicio_pasteleria' %}">Ver productos</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            🧾 Órdenes
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Agregar orden</a></li>
+            <li><a class="dropdown-item" href="#">Ver orden</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            👩‍🍳 Empleados
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Agregar empleado</a></li>
+            <li><a class="dropdown-item" href="#">Ver empleado</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

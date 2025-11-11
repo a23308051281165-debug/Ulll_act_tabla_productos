@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pastelería</title>
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg-soft:#f7f9fc;
+      --card:#ffffff;
+      --accent:#f6d6e0; /* suave */
+      --muted:#6c757d;
+    }
+    body { background: var(--bg-soft); color:#333; }
+    .navbar-brand { font-weight:700; }
+    footer { 
+      position: fixed; 
+      bottom:0; left:0; width:100%; 
+      background:#fff; 
+      border-top:1px solid #e9ecef; 
+      padding:8px 0; 
+    }
+    .main-container { padding-bottom:70px; } /* evitar que el footer tape contenido */
+    .pasteleria-img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+  </style>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  {% include 'navbar.html' %}
+
+  <div class="container main-container mt-4 text-center">
+    {% block content %}
+      <h1 class="mb-4">Bienvenido al Sistema de Administración de Pastelería</h1>
+      <p class="lead">Gestiona tus productos, órdenes y empleados fácilmente.</p>
+
+      <!-- Imagen desde tu carpeta local -->
+      <img src="{% static 'img/no-es-una-fiesta-si-no-hay-pastel-41eaa3f5.jpeg' %}"
+           alt="Pasteles deliciosos"
+           class="pasteleria-img img-fluid shadow-lg">
+
+    {% endblock %}
+  </div>
+
+  {% include 'footer.html' %}
+  <!-- Bootstrap JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

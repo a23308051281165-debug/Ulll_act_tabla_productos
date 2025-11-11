@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+  <div class="card shadow-lg border-0">
+    <div class="card-header bg-primary text-white text-center">
+      <h3>Detalles del Producto</h3>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{ producto.nombre }}</h4>
+      <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
+      <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
+      <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+      <p><strong>Stock disponible:</strong> {{ producto.stock }}</p>
+      <p><strong>Unidad de medida:</strong> {{ producto.unidad_medida }}</p>
+    </div>
+    <div class="card-footer text-center">
+      <a href="/" class="btn btn-secondary">Regresar</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
